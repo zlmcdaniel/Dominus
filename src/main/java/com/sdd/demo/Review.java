@@ -45,7 +45,7 @@ public class Review {
 	}
 
 	// Accessor(s)
-	public public String getID() {
+	public String getID() {
 		return id;
 	}
 	public String getTitle() {
