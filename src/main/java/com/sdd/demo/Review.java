@@ -21,7 +21,7 @@ public class Review {
 	public Review( String title_, int num_stars_, String comments_,
 				   Renter reviewer_, Landlord landlord_ ) {
 		this( title_, num_stars_, comments_, reviewer_, landlord_,
-			  false, ArrayList() );
+			  false, new ArrayList<>() );
 	}
 	public Review( String title_, int num_stars_, String comments_,
 				   Renter reviewer_, Landlord landlord_, 

@@ -39,7 +39,7 @@ class Renter extends User {
 
     public boolean deleteReview(Review review) {
         for(int i = 0; i < reviews.size(); i++) {
-            if(reviews.get(i).getId() == review.getId()) {
+            if(reviews.get(i).getID() == review.getID()) {
                 reviews.remove(i);
                 return true;
             }
