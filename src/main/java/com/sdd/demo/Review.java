@@ -37,7 +37,7 @@ public class Review {
 		images = images_;
 		
 		// Create and set id, then increment nextID for next use
-		String nextIDString = nextID;
+		String nextIDString = String.valueOf(nextID);
 		String leading0s = "";
 		for ( int i = 0; i < IDLENGTH - nextIDString.length(); i++ ) {
 			leading0s += "0";
