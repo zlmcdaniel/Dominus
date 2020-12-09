@@ -1,4 +1,5 @@
 // Java library import(s)
+package com.sdd.demo;
 
 public abstract class User {
 
