@@ -3,6 +3,13 @@ package com.sdd.demo;
 import java.util.ArrayList;
 
 public class System {
+    public static System system_instance = null;
+
+    public System() {
+        if (system_instance == null) {
+            system_instance = new System();
+        }
+    }
     private UserSystem userSystem;
     private ReviewSystem reviewSystem;
 
