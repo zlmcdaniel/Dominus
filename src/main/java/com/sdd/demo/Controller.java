@@ -17,7 +17,7 @@ public class Controller {
     } 
 
     // Implement event parsing later...
-    public void handleEvent( String eventSpecification ) {
+    public static void handleEvent( String eventSpecification ) throws IllegalArgumentException{
         java.lang.System.out.println( "Handle event: " + eventSpecification );
     }
 }

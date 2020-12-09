@@ -49,6 +49,11 @@ public class ReviewSystem {
                 results.add( review );
                 continue;
             }
+
+            else if( review.getLandlord().getFirstName().indexOf( keyword ) != -1 || review.getLandlord().getLastName().indexOf( keyword ) != -1) {
+                results.add( review );
+                continue;
+            }
         }
 
         return results;
