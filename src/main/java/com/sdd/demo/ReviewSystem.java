@@ -1,5 +1,6 @@
-import java.util.ArrayList;
 package com.sdd.demo;
+import java.util.ArrayList;
+
 
 public class ReviewSystem {
     
@@ -20,7 +21,7 @@ public class ReviewSystem {
     public boolean removeReview( String id ) {
         for( Review review : reviews )
         {
-            if( review.getId().equals( id ) ) {
+            if( review.getID().equals( id ) ) {
                 return reviews.remove( review );
             }
         }
@@ -39,12 +40,17 @@ public class ReviewSystem {
                 continue;
             }
 
-            else if( review.getComment().indexOf( keyword ) != -1 ) {
+            else if( review.getComments().indexOf( keyword ) != -1 ) {
                 results.add( review );
                 continue;
             }
 
             else if( review.getReviewer().getFirstName().indexOf( keyword ) != -1 || review.getReviewer().getLastName().indexOf( keyword ) != -1) {
+                results.add( review );
+                continue;
+            }
+
+            else if( review.getLandlord().getFirstName().indexOf( keyword ) != -1 || review.getLandlord().getLastName().indexOf( keyword ) != -1) {
                 results.add( review );
                 continue;
             }
