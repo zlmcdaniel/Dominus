@@ -29,4 +29,16 @@ public class Landlord extends User {
 		return reviews.add( review );
 	}
 
+	public boolean removeReview( String id ) {
+		for ( int i = 0; i < reviews.size(); i++ ) {
+			if ( reviews.get(i).getID().equals(id) ) {
+				// Remove review if found in list, return true when removed
+				reviews.remove( i );
+				return true;
+			}
+		}
+		// Return review if review is removed
+		return false;
+	}
+
 }
