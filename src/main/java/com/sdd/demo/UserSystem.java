@@ -30,7 +30,11 @@ public class UserSystem {
 
     // Get the strikes for the user
     public int getStrikes( User user ) {
-        return user.getStrikes();
+        if ( user instanceof Renter ) {
+            Renter r = (Renter) user;
+            return r.getStrikes();
+        }
+        return -1;
     }
 
     // Check if the user is authenticated
