@@ -10,7 +10,7 @@ public class Landlord extends User {
 	// Constructor(s)
 	public Landlord( String first_name_, String last_name_ ) {
 		// Set up user
-		super( null, first_name_, last_name_, null, null );
+		super( null, first_name_, last_name_, null, null, null, null );
 
 		// Create empty list for reviews
 		reviews = new ArrayList<Review>();
