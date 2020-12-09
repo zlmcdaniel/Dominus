@@ -11,9 +11,9 @@ public class UserFactory {
             case "Landlord":
                 return new Landlord( first_name, last_name );
             case "Renter":
-                return new Renter( username, first_name, last_name, email, password );
+                return new Renter( username, first_name, last_name, email, password, secret_question, secret_answer );
             case "Administrator":
-                return new Administrator( username, first_name, last_name, email, password );
+                return new Administrator( username, first_name, last_name, email, password, secret_question, secret_answer );
             default:
                 throw new IllegalArgumentException("User type not recognized");
         }
