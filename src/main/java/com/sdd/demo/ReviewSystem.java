@@ -50,7 +50,7 @@ public class ReviewSystem {
                 continue;
             }
 
-            else if( review.getLandlord().getFirst_name().indexOf( keyword ) != -1 || review.getLandlord().getLast_name().indexOf( keyword ) != -1) {
+            else if( review.getLandlord().getFirstName().indexOf( keyword ) != -1 || review.getLandlord().getLastName().indexOf( keyword ) != -1) {
                 results.add( review );
                 continue;
             }
