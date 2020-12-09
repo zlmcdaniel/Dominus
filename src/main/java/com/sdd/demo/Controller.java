@@ -1,3 +1,5 @@
+package com.sdd.demo
+
 public class Controller {
     
     private static Controller controller_instance = null;
