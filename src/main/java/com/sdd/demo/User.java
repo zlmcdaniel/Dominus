@@ -67,4 +67,8 @@ public abstract class User {
         }
 
     }
+
+    public boolean checkPassword(String password) {
+        return password.equals(this.password);
+    }
 }
