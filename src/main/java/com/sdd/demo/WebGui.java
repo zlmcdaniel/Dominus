@@ -9,10 +9,10 @@ public class WebGui {
         }
     }
     void displayReviews( Landlord landlord ) {
-        System.out.println( landlord.getReviews() );
+        java.lang.System.out.println( landlord.getReviews() );
     }
     void displayProfile( User user ) {
-        System.out.println( user );
+        java.lang.System.out.println( user );
     }
     void addAccount( String username, String first_name, 
                      String last_name, String email, 
