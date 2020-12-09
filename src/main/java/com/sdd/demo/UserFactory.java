@@ -10,6 +10,10 @@ public class UserFactory {
         switch (user_type) {
             case "Landlord":
                 return new Landlord( first_name, last_name );
+            case "Renter":
+                return new Renter( username, first_name, last_name, email, password );
+            case "Administrator":
+                return new Administrator( username, first_name, last_name, email, password );
             default:
                 throw new IllegalArgumentException("User type not recognized");
         }
