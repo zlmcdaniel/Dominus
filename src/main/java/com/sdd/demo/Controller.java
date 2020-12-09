@@ -1,4 +1,4 @@
-package com.sdd.demo
+package com.sdd.demo;
 
 public class Controller {
     

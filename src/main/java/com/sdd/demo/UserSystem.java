@@ -1,4 +1,4 @@
-package com.sdd.demo
+package com.sdd.demo;
 import java.util.ArrayList;
 
 public class UserSystem {
