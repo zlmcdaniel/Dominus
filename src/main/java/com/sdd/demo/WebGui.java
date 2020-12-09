@@ -1,3 +1,5 @@
+package com.sdd.demo
+
 public class WebGui {
     public static WebGui web_gui_instance = null;
 
