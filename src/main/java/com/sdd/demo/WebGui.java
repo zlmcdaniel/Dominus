@@ -9,10 +9,10 @@ public class WebGui {
         }
     }
     void displayReviews( Landlord landlord ) {
-        System.out.println( landlord.getReviews() );
+        java.lang.System.out.println( landlord.getReviews() );
     }
     void displayProfile( User user ) {
-        System.out.println( user );
+        java.lang.System.out.println( user );
     }
     void addAccount( String username, String first_name, 
                      String last_name, String email, 
@@ -23,7 +23,7 @@ public class WebGui {
         Controller.handleEvent( "login", username, password );
     }
     void viewStrikes( Renter renter ) {
-        System.out.print( renter.getStrikes() );
+        java.lang.System.out.print( renter.getStrikes() );
     }
     boolean addReview( String title, String body, int num_stars) {
         Controller.handleEvent( "addReview", title, body, num_stars );
