@@ -12,10 +12,19 @@ class Renter extends User {
         reviews = new ArrayList<Review>();
     }
 
+
+
+
+    // Accessor(s)
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
     public int getStrikes() {
         return strikes;
     }
 
+
+    // Modifier(s)
     public void incrementStrikes() {
         if(strikes < 3) {
             strikes++;
@@ -25,11 +34,7 @@ class Renter extends User {
     public void decrementStrikes() {
         if(strikes > 0) {
             strikes--;
-        }    
-    }
-
-    public ArrayList<Review> getReviews() {
-        return reviews;
+        }
     }
 
     public boolean addReview(Review review) {

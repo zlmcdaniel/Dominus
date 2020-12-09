@@ -69,6 +69,7 @@ public class Review {
 		return is_verified;
 	}
 
+
 	// Modifier(s)
 	public boolean setIsVerified( boolean is_verified_ ) {
 		is_verified = is_verified_;
