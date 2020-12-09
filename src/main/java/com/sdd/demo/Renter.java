@@ -7,15 +7,24 @@ class Renter extends User {
     private int strikes;
     private ArrayList<Review> reviews;
 
-    public Renter( String username, String first_name, String last_name, String email, String password ) {
-        super(username, first_name, last_name, email, password);
+    public Renter( String username, String first_name, String last_name, String email, String password, String secret_question, String secret_answer ) {
+        super(username, first_name, last_name, email, password, secret_question, secret_answer);
         reviews = new ArrayList<Review>();
     }
 
+
+
+
+    // Accessor(s)
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
     public int getStrikes() {
         return strikes;
     }
 
+
+    // Modifier(s)
     public void incrementStrikes() {
         if(strikes < 3) {
             strikes++;
@@ -25,11 +34,7 @@ class Renter extends User {
     public void decrementStrikes() {
         if(strikes > 0) {
             strikes--;
-        }    
-    }
-
-    public ArrayList<Review> getReviews() {
-        return reviews;
+        }
     }
 
     public boolean addReview(Review review) {
@@ -39,7 +44,7 @@ class Renter extends User {
 
     public boolean deleteReview(Review review) {
         for(int i = 0; i < reviews.size(); i++) {
-            if(reviews.get(i).getId() == review.getId()) {
+            if(reviews.get(i).getID() == review.getID()) {
                 reviews.remove(i);
                 return true;
             }

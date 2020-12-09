@@ -32,11 +32,11 @@ public abstract class User {
         return username;
     }
 
-    public String getFirst_name() {
+    public String getFirstName() {
         return first_name;
     }
 
-    public String getLast_name() {
+    public String getLastName() {
         return last_name;
     }
 
@@ -44,7 +44,7 @@ public abstract class User {
         return email;
     }
 
-    public String getSecret_question() {
+    public String getSecretQuestion() {
         return secret_question;
     }
 

@@ -1,4 +1,6 @@
 // Java library import(s)
+package com.sdd.demo;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Review {
@@ -19,7 +21,7 @@ public class Review {
 	public Review( String title_, int num_stars_, String comments_,
 				   Renter reviewer_, Landlord landlord_ ) {
 		this( title_, num_stars_, comments_, reviewer_, landlord_,
-			  false, ArrayList() );
+			  false, new ArrayList<>() );
 	}
 	public Review( String title_, int num_stars_, String comments_,
 				   Renter reviewer_, Landlord landlord_, 
@@ -35,7 +37,7 @@ public class Review {
 		images = images_;
 		
 		// Create and set id, then increment nextID for next use
-		String nextIDString = nextID;
+		String nextIDString = String.valueOf(nextID);
 		String leading0s = "";
 		for ( int i = 0; i < IDLENGTH - nextIDString.length(); i++ ) {
 			leading0s += "0";
@@ -66,6 +68,7 @@ public class Review {
 	public boolean getIsVerified() {
 		return is_verified;
 	}
+
 
 	// Modifier(s)
 	public boolean setIsVerified( boolean is_verified_ ) {
