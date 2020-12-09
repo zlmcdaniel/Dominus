@@ -1,4 +1,11 @@
 public class WebGui {
+    public static WebGui web_gui_instance = null;
+
+    public WebGui() {
+        if (web_gui_instance == null) {
+            web_gui_instance = new WebGui();
+        }
+    }
     void displayReviews( Landlord landlord ) {
         System.out.println( landlord.getReviews() );
     }
