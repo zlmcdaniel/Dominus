@@ -5,10 +5,13 @@ public class UserSystem {
     
     private ArrayList<User> users;
 
+    private User cached_user;
+
     public UserSystem() {
         super();
 
         users = new ArrayList<User>();
+        cached_user = null;
     }
 
     // Add a user to the System
@@ -16,10 +19,14 @@ public class UserSystem {
         return users.add( user );
     }
 
+    // Get the currently cached user
+    public User cachedUser() {
+        return cached_user;
+    }
+
     // Get a User by the username
     public User getUserByUsername( String username ) {
-        for( User user : users )
-        {
+        for( User user : users ) {
             if( user.getUsername().equals( username ) ) {
                 return user;
             }
@@ -39,7 +46,9 @@ public class UserSystem {
 
     // Check if the user is authenticated
     public boolean authenticateUser( String username, String password ) {
-        if( getUserByUsername( username ) != null && getUserByUsername( username ).checkPassword( password ) ) {
+        User check = getUserByUsername( username );
+        if( check != null && check.checkPassword( password ) ) {
+            cached_user = check;
             return true;
         }
 
