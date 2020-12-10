@@ -30,6 +30,10 @@ public class System {
     }
     int getStrikes( User user ) {
         return userSystem.getStrikes( user );
+    }
+    // Get the currently cached user
+    public User getCachedUser() {
+        return userSystem.getCachedUser();
     } 
     boolean authenticateUser( String username, String password ) {
         return userSystem.authenticateUser( username, password );

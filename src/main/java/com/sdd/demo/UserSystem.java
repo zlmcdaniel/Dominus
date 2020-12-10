@@ -20,7 +20,7 @@ public class UserSystem {
     }
 
     // Get the currently cached user
-    public User cachedUser() {
+    public User getCachedUser() {
         return cached_user;
     }
 
