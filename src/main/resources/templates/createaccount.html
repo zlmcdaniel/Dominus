@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css" \>
+    </head>
+    <body>
+        <h1>Create account</h1>
+        
+        <form action="#" th:action="@{/renter}" th:object="${renter}" method="post">
+            <p>First name: </p>
+            <input type="text" th:field="*{first_name}">
+            
+            <p>Last name: </p>
+            <input type="text" th:field="*{last_name}">
+            
+            <p>Email: </p>
+            <input type="text" th:field="*{email}">
+            
+            <p>Username: </p>
+            <input type="text" th:field="*{username}">
+            
+            <p>Secret question: </p>
+            <select th:field="*{secretQuestion}">
+                <option th:value=1>Who was your favorite elementary school teacher?</option>
+                <option th:value=2>What street was your childhood home on?</option>
+                <option th:value=3>What was the name of your first pet?</option>
+            </select>
+            
+            <p>Secret answer: </p>
+            <input type="text" >
+            
+            <p>Password: </p>
+            <input type="password" th:field="*{password}">
+            
+            <p>Confirm password: </p>
+            <input type="password" th:field="*{password}">
+            
+            <br><br><input type="submit">
+        </form>
+    </body>
+</html>
