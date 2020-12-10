@@ -8,7 +8,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class WebController {
     @GetMapping("/createaccount")
-    public String greeting(Model model) {
+    public String createAccount( Model model ) {
         return "createaccount";
     }
+
+    @GetMapping("/user/Bob")
+    public String user( Model model ) {
+        return "userprofile";
+    }
+
+
 }
